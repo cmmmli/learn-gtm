@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
     return {
       gtmId: "GTM-WLMMSC8",
       dataLayer: {
-        userId: uuid,
+        user_id: uuid,
       },
     };
   }, [uuid]);
