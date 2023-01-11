@@ -16,16 +16,22 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
-
         <p className={styles.description}>
-          <Link href={'/hello'}>Hello</Link>
+          <Link href={"/hello"}>Hello</Link>
         </p>
-
+        <p className={styles.description}>
+          <Link
+            href={
+              "/withutm?utm_source=summer-mailer&utm_medium=email&utm_campaign=summer-sale"
+            }
+          >
+            With UTM parameters
+          </Link>
+        </p>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
