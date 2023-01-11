@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 
   if (uuid == null) {
     uuid = uuidv4();
-    setCookie(null, user_id_key, uuid, { expires: 60 * 60 * 24 });
+    setCookie(null, user_id_key, uuid, { maxAge: 60 * 60 * 24 });
   }
 
   const tagManagerArgs = useMemo(() => {
