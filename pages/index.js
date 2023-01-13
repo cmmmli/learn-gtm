@@ -22,6 +22,8 @@ export default function Home() {
         </p>
         <p className={styles.description}>
           <Link href={"/hello"}>Hello</Link>
+          <br />
+          <Link href={"/conversion"}>Conversion</Link>
         </p>
         <p className={styles.description}>
           <Link
