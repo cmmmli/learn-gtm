@@ -4,10 +4,12 @@ import TagManager from "react-gtm-module";
 import { parseCookies, setCookie } from "nookies";
 
 import "../styles/globals.css";
+import { useRouter } from "next/router";
 
 const user_id_key = "test_user_id";
 
 function MyApp({ Component, pageProps }) {
+  const { pathname } = useRouter();
   let uuid = parseCookies().test_user_id;
 
   if (uuid == null) {
@@ -19,14 +21,14 @@ function MyApp({ Component, pageProps }) {
     return {
       gtmId: "GTM-WLMMSC8",
       dataLayer: {
-        user_id: uuid,
+        user_id: pathname.includes("without_userid") ? undefined : uuid,
       },
     };
-  }, [uuid]);
+  }, [pathname, uuid]);
 
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
-  }, [tagManagerArgs]);
+  }, [pathname, tagManagerArgs]);
 
   return <Component {...pageProps} />;
 }
