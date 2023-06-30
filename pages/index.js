@@ -35,6 +35,10 @@ export default function Home() {
         <div id="test_uuid" style={{ display: "none" }}>
           34567890
         </div>
+
+        <div style={{ height: "100vh" }}>super height div</div>
+
+        <div>こんにちは</div>
       </main>
 
       <footer className={styles.footer}>
